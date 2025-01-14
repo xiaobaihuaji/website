@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="title">Bcom-8000 DRM调制器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1 data-lang="title">Bcom-8000 DRM调制</h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#" data-lang="statusMenu">系统状态 ▼</a>
+          <ul class="dropdown-content">
+            <!-- 状态概览链接修改为 '#'，保持在当前页面 -->
+            <li><a href="#" data-lang="statusOverviewLink" onclick="return false;">状态概览</a></li>
+            <li><a href="logs.html" data-lang="logLink">日志</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-lang="systemMenu">系统设置 ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="settings.html" data-lang="systemSettingsLink">基本设置</a></li>
+            <li><a href="network.html" data-lang="networkSettingsLink">网络配置</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-lang="drmMenu">DRM配置 ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="mux_input.html" data-lang="muxInputLink">复用流输入</a></li>
+            <li><a href="modulation.html" data-lang="modulationOutputLink">调制输出</a></li>
+            <li><a href="clock_sync.html" data-lang="clockSyncLink">时钟同步</a></li>
+            <li><a href="baseband_recording.html" data-lang="basebandRecordingLink">基带录制</a></li>
+          </ul>
+        </li>
+        <li><a href="logout.html" data-lang="logoutMenu">退出</a></li>
+      </ul>
+      <!-- 保持语言切换按钮 -->
+      <button class="language-toggle" id="language-btn" data-lang="languageBtn">中文</button>
+    </nav>
+  </header>
+  <main>
+    <section class="status-overview">
+      <h2 data-lang="overviewTitle">状态概览</h2>
+      <table>
+        <tr>
+          <th id="table-header-item" data-lang="tableHeaderItem">项目</th>
+          <th id="table-header-value" data-lang="tableHeaderValue">值/设置</th>
+        </tr>
+        <tr>
+          <td id="table-work-status" data-lang="tableWorkStatus">工作状态</td>
+          <td id="work-status-value">0</td>
+        </tr>
+        <tr>
+          <td id="table-temperature" data-lang="tableTemperature">主板温度</td>
+          <td id="temp-value">0 °C</td>
+        </tr>
+        <tr>
+          <td id="table-software-version" data-lang="tableSoftwareVersion">软件版本</td>
+          <td id="version-value"><span>0</span></td>
+        </tr>
+        <tr>
+          <td id="table-serial-number" data-lang="tableSerialNumber">序列号</td>
+          <td id="serial-value">0</td>
+        </tr>
+        <tr>
+          <td id="table-product-model" data-lang="tableProductModel">产品型号</td>
+          <td id="product-value">0</td>
+        </tr>
+      </table>
+      <button class="refresh-btn" data-lang="refreshBtn">刷新</button>
+    </section>
+  </main>
+</body>
+<script src="global.js"></script>
+</html>

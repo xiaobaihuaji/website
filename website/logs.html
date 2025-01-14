@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="logTitle">日志页面</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1 data-lang="title">Bcom-8000 DRM调制器</h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#" data-lang="statusMenu">系统状态 ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="index.html" data-lang="statusOverviewLink">状态概览</a></li>
+            <li><a href="logs.html" data-lang="logLink">日志</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-lang="systemMenu">系统设置 ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="settings.html" data-lang="systemSettingsLink">基本设置</a></li>
+            <li><a href="network.html" data-lang="networkSettingsLink">网络配置</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-lang="drmMenu">DRM配置 ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="mux_input.html" data-lang="muxInputLink">复用流输入</a></li>
+            <li><a href="modulation.html" data-lang="modulationOutputLink">调制输出</a></li>
+            <li><a href="clock_sync.html" data-lang="clockSyncLink">时钟同步</a></li>
+            <li><a href="baseband_recording.html" data-lang="basebandRecordingLink">基带录制</a></li>
+          </ul>
+        </li>
+        <li><a href="logout.html" data-lang="logoutMenu">退出</a></li>
+      </ul>
+      <button class="language-toggle" id="language-btn" data-lang="languageBtn">中文</button>
+    </nav>
+  </header>
+  <main>
+    <section class="log-section">
+      <h2 data-lang="logHeader">当前日志条数: <span id="log-count">0</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th data-lang="logEvent">事件</th>
+            <th data-lang="logCategory">分类</th>
+            <th data-lang="logTime">时间</th>
+            <th data-lang="logDescription">描述</th>
+            <th data-lang="logAction">操作</th>
+          </tr>
+        </thead>
+        <tbody id="log-table-body">
+          <!-- 日志内容将通过 JavaScript 动态添加 -->
+        </tbody>
+      </table>
+
+      <div class="log-input">
+        <input type="text" id="new-event" placeholder="事件">
+        <input type="text" id="new-category" placeholder="分类">
+        <input type="text" id="new-time" placeholder="时间">
+        <button id="get-current-time">获取系统时间</button>
+        <input type="text" id="new-description" placeholder="描述">
+        <button id="add-log-btn">添加日志</button>
+      </div>
+
+      <div class="pagination">
+        <button class="pagination-btn" id="prev-page" disabled data-lang="prevPage">◀</button>
+        <span id="current-page">1</span>
+        <button class="pagination-btn" id="next-page" disabled data-lang="nextPage">▶</button>
+      </div>
+      <button class="refresh-btn" id="refresh-logs" data-lang="refreshBtn">刷新</button>
+    </section>
+  </main>
+  <script src="global.js"></script>
+  <script src="logs.js"></script>
+</body>
+</html>
